@@ -1,0 +1,24 @@
+{
+  "name": "odin-minimessageboard",
+  "version": "1.0.0",
+  "description": "Mini message board for the odin project",
+  "homepage": "https://github.com/PierreGronnier/odin-MiniMessageBoard#readme",
+  "bugs": {
+    "url": "https://github.com/PierreGronnier/odin-MiniMessageBoard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierreGronnier/odin-MiniMessageBoard.git"
+  },
+  "license": "ISC",
+  "author": "Pierre Gronnier",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
