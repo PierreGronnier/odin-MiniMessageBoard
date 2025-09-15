@@ -7,5 +7,17 @@
   </head>
   <body>
     <h1>New message page</h1>
+    <form method="POST" action="/new">
+      <div>
+        <label for="user">Author name:</label>
+        <input type="text" id="user" name="user" />
+      </div>
+      <div>
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="/">Cancel</a>
   </body>
 </html>

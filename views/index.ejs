@@ -6,6 +6,13 @@
     <title>Mini Message Board</title>
   </head>
   <body>
-    <h1>Mini Message Board homepage</h1>
+    <h1>Mini message board</h1>
+    <a href="/new">New</a>
+    <% messages.forEach((message, index) => { %>
+    <p><%= message.user %></p>
+    <p><%= message.text %></p>
+    <p><%= message.added %></p>
+    <a href="/message/<%= index %>">Open</a>
+    <% }); %>
   </body>
 </html>
