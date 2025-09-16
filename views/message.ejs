@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Message details</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/layout.css" />
+    <link rel="stylesheet" href="/components.css" />
   </head>
   <body>
-    <h1>Message details</h1>
-    <p><strong>Text:</strong> <%= message.text %></p>
-    <p><strong>Author:</strong> <%= message.user %></p>
-    <p><strong>Added:</strong> <%= message.added %></p>
-    <a href="/">Back to messages</a>
+    <div class="board">
+      <h1>Message details</h1>
+      <div class="note">
+        <div class="note-meta">
+          <strong><%= message.user %></strong><br />
+          <small>
+            <%= message.added.toLocaleDateString() %> | <%=
+            message.added.toLocaleTimeString() %>
+          </small>
+        </div>
+
+        <div class="note-text"><%= message.text %></div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="/">Back to notes</a>
+      </div>
+    </div>
   </body>
+  <%- include('footer') %>
 </html>

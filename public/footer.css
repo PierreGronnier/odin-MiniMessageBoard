@@ -1,0 +1,25 @@
+/* footer.css */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff89a; /* couleur post-it */
+  border-radius: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* logo GitHub simple en noir */
+.footer img {
+  width: 24px;
+  height: 24px;
+}

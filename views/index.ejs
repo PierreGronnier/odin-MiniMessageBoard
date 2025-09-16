@@ -4,15 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Message Board</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/layout.css" />
+    <link rel="stylesheet" href="/components.css" />
   </head>
   <body>
-    <h1>Mini message board</h1>
-    <a href="/new">New</a>
-    <% messages.forEach((message, index) => { %>
-    <p><%= message.user %></p>
-    <p><%= message.text %></p>
-    <p><%= message.added %></p>
-    <a href="/message/<%= index %>">Open</a>
-    <% }); %>
+    <div class="board">
+      <h1>Mini Message Board</h1>
+      <a class="btn-new" href="/new">+ Add a new note</a>
+      <div class="note-list">
+        <% messages.forEach((message, index) => { %>
+        <div class="note">
+          <div class="note-meta">
+            <strong><%= message.user %></strong><br />
+            <small>
+              <%= message.added.toLocaleDateString() %> | <%=
+              message.added.toLocaleTimeString() %>
+            </small>
+          </div>
+
+          <div class="note-text"><%= message.text %></div>
+          <br />
+          <a class="btn" href="/message/<%= index %>">Open</a>
+        </div>
+        <% }); %>
+      </div>
+    </div>
   </body>
+  <%- include('footer') %>
 </html>

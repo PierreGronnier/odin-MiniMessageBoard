@@ -4,20 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New message page</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/layout.css" />
+    <link rel="stylesheet" href="/components.css" />
   </head>
   <body>
-    <h1>New message page</h1>
-    <form method="POST" action="/new">
-      <div>
-        <label for="user">Author name:</label>
-        <input type="text" id="user" name="user" />
+    <div class="board">
+      <h1>Write a new note</h1>
+      <div class="form-container">
+        <form method="POST" action="/new" class="form">
+          <div class="form-group">
+            <label for="user">Author name:</label>
+            <input type="text" id="user" name="user" required maxlength="50" />
+          </div>
+          <div class="form-group">
+            <label for="text">Message text:</label>
+            <textarea
+              id="text"
+              name="text"
+              rows="4"
+              required
+              maxlength="400"
+            ></textarea>
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit">Submit</button>
+            <a class="btn" href="/">Cancel</a>
+          </div>
+        </form>
       </div>
-      <div>
-        <label for="text">Text:</label>
-        <input type="text" id="text" name="text" />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-    <a href="/">Cancel</a>
+    </div>
   </body>
+  <%- include('footer') %>
 </html>

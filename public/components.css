@@ -1,0 +1,140 @@
+/* Conteneur principal du tableau */
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* Titre*/
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 2rem;
+  color: #ffeb3b;
+  text-align: center;
+  margin: 20px 0;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Zone qui liste les notes */
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Style Post-it */
+.note {
+  background: #fff89a;
+  padding: 20px;
+  width: 220px;
+  min-height: 140px;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #e0d46a;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  position: relative;
+  transition: transform 0.2s ease;
+  transform: rotate(-2deg);
+}
+
+/* Effet aléatoire */
+.note:nth-child(even) {
+  transform: rotate(2deg);
+  background: #fffa87;
+}
+
+/* Hover */
+.note:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Métadonnées */
+.note-meta {
+  font-size: 0.8rem;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.note-text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* Boutons */
+.btn,
+.btn-new {
+  display: inline-block;
+  background: #ff6f61;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: normal;
+  transition: 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-new:hover {
+  background: #e85a4f;
+}
+
+/* Formulaire */
+.form-container {
+  background: #fffa87;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
